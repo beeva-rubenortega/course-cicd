@@ -7,7 +7,7 @@ git credentialsId: '8bccce14-fb27-41a3-af5f-14fd45e63074', url: 'git@github.com:
     sh './simplehttpserver/tests/unittests.sh ./simplehttpserver/'
   }
   stage('Package and publish') {
-    sh "tar -zcvf simplehttpserver-${env.JO_NAME}-${env.BUILD_ID}.tar.gz ./simplehttpserver"
-    sh "aws s3 cp simplehttpserver-${env.JOB_NAME}-${env.BUIL_ID}.tar.gz s3://clase-gendevops2-cicd-ci/"
+    sh "tar -zcvf simplehttpserver-${env.JOB_NAME}-${env.BUILD_ID}.tar.gz ./simplehttpserver"
+    sh "aws s3 cp simplehttpserver-${env.JOB_NAME}-${env.BUILB_ID}.tar.gz s3://clase-gendevops2-cicd-ci/"
   }
 }
