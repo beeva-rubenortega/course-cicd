@@ -3,4 +3,7 @@ node('master') {
     deleteDir()
 git credentialsId: '8bccce14-fb27-41a3-af5f-14fd45e63074', url: 'git@github.com:beeva-rubenortega/course-cicd.git'
   }
+  stage('Test') {
+    sh './simplehttpserver/tests/nittests.sh ./simplehttpserver/'
+  }
 }
